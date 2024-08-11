@@ -25,10 +25,6 @@ Component introduction() {
                 text:
                     "Kitawi is still in development and not yet ready for production use.",
               ),
-              Span(
-                text: "Learn more",
-                className: "text-teal-500 cursor-pointer hover:underline",
-              )
             ],
           )
         ],
@@ -93,6 +89,7 @@ Builder(
           Span(
             text: "Learn more",
             className: "text-teal-500 cursor-pointer hover:underline",
+            onClick: (p0) => router.push("/state"),
           )
         ],
       ),

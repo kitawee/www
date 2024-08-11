@@ -45,7 +45,27 @@ PageView(
 router.push("/about");
 """),
       P("The router.push() method is used to navigate to a new route. If the route matches a page in the PageView component, the page will be rendered else a 404 page will be rendered."),
-      
+      Hr(
+        className: "my-4",
+      ),
+      Div(
+        className: "w-full flex justify-start",
+        children: [
+          Div(
+            className: "flex flex-row",
+            children: [
+              Span(
+                text: "chevron_left",
+                className: "material-symbols-outlined cursor-pointer",
+              ),
+              Span(
+                text: "Async Rendering",
+                className: "cursor-pointer",
+              ),
+            ],
+          ),
+        ],
+      )
     ],
   );
 }
