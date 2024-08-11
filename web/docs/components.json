@@ -1,0 +1,97 @@
+{
+  "version": "0.1.4",
+  "components": [
+    {
+      "name": "Button",
+      "path": "components/input/Button.md"
+    },
+    {
+      "name": "Input",
+      "path": "components/input/Input.md"
+    },
+    {
+      "name": "Select",
+      "path": "components/input/Select.md"
+    },
+    {
+      "name": "Checkbox",
+      "path": "components/input/Checkbox.md"
+    },
+    {
+      "name": "Radio",
+      "path": "components/input/Radio.md"
+    },
+    {
+      "name": "Switch",
+      "path": "components/input/Switch.md"
+    },
+    {
+      "name": "Slider",
+      "path": "components/input/Slider.md"
+    },
+    {
+      "name": "Datepicker",
+      "path": "components/input/Datepicker.md"
+    },
+    {
+      "name": "Timepicker",
+      "path": "components/input/Timepicker.md"
+    },
+    {
+      "name": "Datetimepicker",
+      "path": "components/input/Datetimepicker.md"
+    },
+    {
+      "name": "Upload",
+      "path": "components/input/Upload.md"
+    },
+    {
+      "name": "Form",
+      "path": "components/input/Form.md"
+    },
+    {
+      "name": "Table",
+      "path": "components/data/Table.md"
+    },
+    {
+      "name": "Pagination",
+      "path": "components/data/Pagination.md"
+    },
+    {
+      "name": "Tag",
+      "path": "components/data/Tag.md"
+    },
+    {
+      "name": "Progress",
+      "path": "components/data/Progress.md"
+    },
+    {
+      "name": "Tree",
+      "path": "components/data/Tree.md"
+    },
+    {
+      "name": "Icon",
+      "path": "components/data/Icon.md"
+    },
+    {
+      "name": "Breadcrumb",
+      "path": "components/navigation/Breadcrumb.md"
+    },
+    {
+      "name": "Dropdown",
+      "path": "components/navigation/Dropdown.md"
+    },
+    {
+      "name": "Menu",
+      "path": "components/navigation/Menu.md"
+    },
+    {
+      "name": "Steps",
+      "path": "components/navigation/Steps.md"
+    },
+    {
+      "name": "Tabs",
+      "path": "components/navigation/Tabs.md"
+    }
+  ]
+}
