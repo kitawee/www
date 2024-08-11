@@ -23,7 +23,7 @@ Component introduction() {
               ),
               Span(
                 text:
-                    "Kitawi is still in development and not yet published to pub.dev",
+                    "Kitawi is still in development and not yet ready for production use.",
               ),
               Span(
                 text: "Learn more",
