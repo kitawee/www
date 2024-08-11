@@ -6,6 +6,7 @@
     "web/index.html",
     "web/bootstrap.js",
     "web/rainbow.js",
-    "web/github.css"
+    "web/github.css",
+    "web/assets/maple.webp"
   ]
 }

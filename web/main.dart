@@ -32,6 +32,8 @@ void main() {
                       className: "flex flex-row gap-4 items-center",
                       children: [
                         Span(
+                          onClick: (p0) => window.open(
+                              "https://github.com/bryanbill/kitawi", "_blank"),
                           text: "Github",
                           className:
                               "cursor-pointer hover:underline hover:text-slate-500 hover:bg-slate-300 px-2 py-1 rounded",
@@ -44,7 +46,7 @@ void main() {
                             context.update();
                           },
                           className:
-                              "cursor-pointer  w-8 h-8 hover:bg-slate-300 rounded-full flex items-center justify-center",
+                              "hidden cursor-pointer  w-8 h-8 hover:bg-slate-300 rounded-full flex items-center justify-center",
                           children: [
                             Span(
                               text: theme.contains("bg-white")
