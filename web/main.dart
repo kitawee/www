@@ -36,7 +36,7 @@ void main() {
                         ),
                         Span(
                           id: 'title',
-                          text: "wi",
+                          text: "kitawi.",
                           className:
                               "font-serif text-xl slide-in 1s ease-in-out hidden md:block",
                         ),
@@ -87,7 +87,7 @@ void main() {
                 ),
                 Hr(),
                 Div(
-                  className: "w-full flex flex-row px-2 lg:px-8 xl:px-52 py-4",
+                  className: "w-full flex flex-row px-2 lg:px-32 xl:px-52 py-4",
                   children: [
                     sidebar(),
                     PageView(
