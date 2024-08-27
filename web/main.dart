@@ -6,9 +6,10 @@ import 'pages/components.dart';
 import 'pages/state_management.dart';
 import 'pages/async_rendering.dart';
 import 'pages/routing.dart';
+import 'pages/template.dart';
 
 void main() {
-  String theme = "bg-white text-slate-800";
+  String theme = "bg-secondary text-primary-800";
 
   final app = App(
       title: "Kitawi",
@@ -21,35 +22,59 @@ void main() {
               children: [
                 Div(
                   className:
-                      "w-full px-4 lg:px-8 xl:px-52 py-4 flex flex-row justify-between items-center",
+                      "w-full px-4 lg:px-32 xl:px-52 py-4 flex flex-row justify-between items-center",
                   children: [
-                    P(
-                      "Kitawi",
-                      className: "text-xl font-bold",
-                      onClick: (p0) => router.push("/"),
+                    Div(
+                      className:
+                          "w-1/3 flex flex-row items-center cursor-pointer hover:underline",
+                      onClick: (p) => router.push("/"),
+                      children: [
+                        Image(
+                          src: "/assets/logo-192.webp",
+                          alt: "Kitawi",
+                          className: "w-8 h-8",
+                        ),
+                        Span(
+                          id: 'title',
+                          text: "wi",
+                          className:
+                              "font-serif text-xl slide-in 1s ease-in-out hidden md:block",
+                        ),
+                      ],
+                    ),
+                    Input(
+                      placeholder: "Search ...",
+                      className:
+                          "w-1/3 px-4 py-2 border border-slate-300 rounded hidden",
                     ),
                     Div(
-                      className: "flex flex-row gap-4 items-center",
+                      className:
+                          "w-1/3 flex flex-row gap-4 items-center justify-end",
                       children: [
-                        Span(
-                          onClick: (p0) => window.open(
-                              "https://github.com/bryanbill/kitawi", "_blank"),
-                          text: "Github",
-                          className:
-                              "cursor-pointer hover:underline hover:text-slate-500 hover:bg-slate-300 px-2 py-1 rounded",
-                        ),
+                        Image(
+                          src:
+                              "https://cdn-icons-png.flaticon.com/512/1051/1051377.png",
+                          alt: "Github",
+                          className: "w-8 h-8 cursor-pointer",
+                        )..addEventListener(
+                            "click",
+                            (e) {
+                              window.open("https://github.com/bryanbill/kitawi",
+                                  "_blank");
+                            },
+                          ),
                         Div(
                           onClick: (p0) {
-                            theme = theme.contains("bg-white")
-                                ? "bg-slate-800 text-white"
-                                : "bg-white text-slate-800";
+                            theme = theme.contains("bg-primary")
+                                ? "bg-bg-primary text-white"
+                                : "bg-primary text-bg-primary";
                             context.update();
                           },
                           className:
                               "hidden cursor-pointer  w-8 h-8 hover:bg-slate-300 rounded-full flex items-center justify-center",
                           children: [
                             Span(
-                              text: theme.contains("bg-white")
+                              text: theme.contains("bg-primary")
                                   ? "dark_mode"
                                   : "light_mode",
                               className: "material-symbols-outlined",
@@ -78,7 +103,7 @@ void main() {
                         ),
                         Page(
                           path: "/components",
-                          builder: (params) => components(),
+                          builder: (params) => KitawiComponents(),
                         ),
                         Page(
                           path: "/state",
@@ -90,7 +115,11 @@ void main() {
                         ),
                         Page(
                           path: "/routing",
-                          builder: (params) => routing(),
+                          builder: (params) => KitawiRouting(),
+                        ),
+                        Page(
+                          path: "/template",
+                          builder: (params) => TemplateDoc(),
                         )
                       ],
                     )

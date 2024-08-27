@@ -274,10 +274,10 @@ packages:
     dependency: "direct main"
     description:
       name: kitawi
-      sha256: "681bc62148b7afabd9567e2a9b7761a99e6b2c61a8ca975624b4305ef671dff5"
+      sha256: "42ae9010cb52485ecf9c720acdd515f275b57ab5725d3557b9eb40bf954417fc"
       url: "https://pub.dev"
     source: hosted
-    version: "0.1.6"
+    version: "0.1.8"
   lints:
     dependency: "direct dev"
     description:

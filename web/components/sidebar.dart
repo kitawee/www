@@ -4,10 +4,6 @@ Component sidebar() {
   return Div(
     className: "hidden lg:w-1/4 xl:w-1/5 lg:flex flex-col gap-4",
     children: [
-      Input(
-        placeholder: "Search ...",
-        className: "w-full px-4 py-2 border border-slate-300 rounded",
-      ),
       Span(
         text: "GETTING STARTED",
         className: "text-sm font-bold my-2",
@@ -36,6 +32,12 @@ Component sidebar() {
       Div(
         className: "flex flex-col gap-2",
         children: [
+          Span(
+            text: "Template",
+            className:
+                "text-slate-500 hover:text-teal-500 cursor-pointer hover:underline",
+            onClick: (p0) => router.push("/template"),
+          ),
           Span(
             text: "State Management",
             className:

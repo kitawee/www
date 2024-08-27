@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:kitawi/kitawi.dart';
 import "../components/code.dart";
+import "../components/paginator.dart";
 
 Component asyncRendering() {
   StreamController<int> controller = StreamController<int>();
@@ -72,39 +73,10 @@ Promise(
       Hr(
         className: "my-4",
       ),
-      Div(
-        className: "w-full flex justify-between",
-        children: [
-          Div(
-            onClick: (p0) => router.push("/state"),
-            className: "flex flex-row hover:text-teal-500",
-            children: [
-              Span(
-                text: "chevron_left",
-                className: "material-symbols-outlined cursor-pointer",
-              ),
-              Span(
-                text: "State Management",
-                className: "cursor-pointer",
-              ),
-            ],
-          ),
-          Div(
-            onClick: (p0) => router.push("/routing"),
-            className: "flex flex-row cursor-pointer hover:text-teal-500 ",
-            children: [
-              Span(
-                text: "Routing",
-                className: "cursor-pointer",
-              ),
-              Span(
-                text: "chevron_right",
-                className: "material-symbols-outlined ",
-              ),
-            ],
-          ),
-        ],
-      )
+      Paginator(
+        previous: (name: "State Management", path: "/state"),
+        next: (name: "Routing", path: "/routing"),
+      ),
     ],
   );
 }

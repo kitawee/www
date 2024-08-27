@@ -1,5 +1,6 @@
 import 'package:kitawi/kitawi.dart';
 import "../components/code.dart";
+import "../components/paginator.dart";
 
 Component stateManagement() {
   int counter = 0;
@@ -64,39 +65,10 @@ Button(
       Hr(
         className: "my-4",
       ),
-      Div(
-        className: "w-full flex justify-between",
-        children: [
-          Div(
-            onClick: (p0) => router.push("/components"),
-            className: "flex flex-row hover:text-teal-500",
-            children: [
-              Span(
-                text: "chevron_left",
-                className: "material-symbols-outlined cursor-pointer",
-              ),
-              Span(
-                text: "Components",
-                className: "cursor-pointer",
-              ),
-            ],
-          ),
-          Div(
-            onClick: (p0) => router.push("/async"),
-            className: "flex flex-row cursor-pointer hover:text-teal-500 ",
-            children: [
-              Span(
-                text: "Async Rendering",
-                className: "cursor-pointer",
-              ),
-              Span(
-                text: "chevron_right",
-                className: "material-symbols-outlined ",
-              ),
-            ],
-          ),
-        ],
-      )
+      Paginator(
+        previous: (name: "Template", path: "/template"),
+        next: (name: "Async Rendering", path: "/async"),
+      ),
     ],
   );
 }

@@ -1,5 +1,6 @@
 import 'package:kitawi/kitawi.dart';
 import '../components/code.dart';
+import '../components/paginator.dart';
 
 Component installation() {
   return Div(
@@ -82,7 +83,7 @@ dependencies:
       code("dart pub get"),
       Div(
         className:
-            "bg-blue-50 border-blue-200 border p-4 rounded flex-row flex items-center gap-4 flex-wrap",
+            "bg-teal-50 border-teal-200 border p-4 rounded flex-row flex items-center gap-4 flex-wrap",
         children: [
           Span(
             className: "material-symbols-outlined",
@@ -95,10 +96,6 @@ dependencies:
                 text:
                     "The CLI is the preferred way to create a new Kitawi project. It comes with a set of commands to help you build web applications faster and optimized for production.",
               ),
-              Span(
-                text:
-                    "The counter above will not be updated when the button is clicked.",
-              )
             ],
           ),
         ],
@@ -106,39 +103,10 @@ dependencies:
       Hr(
         className: "my-4",
       ),
-      Div(
-        className: "w-full flex justify-between",
-        children: [
-          Div(
-            onClick: (p0) => router.push("/"),
-            className: "flex flex-row hover:text-teal-500",
-            children: [
-              Span(
-                text: "chevron_left",
-                className: "material-symbols-outlined cursor-pointer",
-              ),
-              Span(
-                text: "Getting Started",
-                className: "cursor-pointer",
-              ),
-            ],
-          ),
-          Div(
-            onClick: (p0) => router.push("/components"),
-            className: "flex flex-row cursor-pointer hover:text-teal-500 ",
-            children: [
-              Span(
-                text: "Installation",
-                className: "cursor-pointer",
-              ),
-              Span(
-                text: "chevron_right",
-                className: "material-symbols-outlined ",
-              ),
-            ],
-          ),
-        ],
-      )
+      Paginator(
+        previous: (name: "Getting Started", path: "/"),
+        next: (name: "Components", path: "/components"),
+      ),
     ],
   );
 }

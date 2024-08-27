@@ -1,0 +1,34 @@
+{
+  "name": "Kitawi",
+  "short_name": "Kitawi",
+  "description": "Documentation of Kitawi, presented in a beautiful way.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fffbf0",
+  "theme_color": "#1b1922",
+  "icons": [
+    {
+      "src": "/assets/logo-192.webp",
+      "sizes": "72x72",
+      "type": "image/webp"
+    },
+    {
+      "src": "/assets/logo-512.webp",
+      "sizes": "512x512",
+      "type": "image/webp"
+    }
+  ],
+  "splash_pages": null,
+  "scope": "/",
+  "orientation": "any",
+  "prefer_related_applications": false,
+  "related_applications": [],
+  "serviceworker": {
+    "src": "/sw.js",
+    "scope": "/"
+  },
+  "categories": [],
+  "screenshots": [],
+  "iarc_rating_id": null,
+  "custom": {}
+}
